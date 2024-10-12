@@ -10,7 +10,6 @@
 		6D7F69412CBAF8E600C9AF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69402CBAF8E600C9AF21 /* AppDelegate.swift */; };
 		6D7F69432CBAF8E600C9AF21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69422CBAF8E600C9AF21 /* SceneDelegate.swift */; };
 		6D7F69452CBAF8E600C9AF21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69442CBAF8E600C9AF21 /* ViewController.swift */; };
-		6D7F69482CBAF8E600C9AF21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F69462CBAF8E600C9AF21 /* Main.storyboard */; };
 		6D7F694B2CBAF8E600C9AF21 /* MoneyWise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69492CBAF8E600C9AF21 /* MoneyWise.xcdatamodeld */; };
 		6D7F694D2CBAF8E800C9AF21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F694C2CBAF8E800C9AF21 /* Assets.xcassets */; };
 		6D7F69502CBAF8E800C9AF21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F694E2CBAF8E800C9AF21 /* LaunchScreen.storyboard */; };
@@ -41,7 +40,6 @@
 		6D7F69402CBAF8E600C9AF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D7F69422CBAF8E600C9AF21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6D7F69442CBAF8E600C9AF21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6D7F69472CBAF8E600C9AF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D7F694A2CBAF8E600C9AF21 /* MoneyWise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyWise.xcdatamodel; sourceTree = "<group>"; };
 		6D7F694C2CBAF8E800C9AF21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D7F694F2CBAF8E800C9AF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				6D7F69402CBAF8E600C9AF21 /* AppDelegate.swift */,
 				6D7F69422CBAF8E600C9AF21 /* SceneDelegate.swift */,
 				6D7F69442CBAF8E600C9AF21 /* ViewController.swift */,
-				6D7F69462CBAF8E600C9AF21 /* Main.storyboard */,
 				6D7F694C2CBAF8E800C9AF21 /* Assets.xcassets */,
 				6D7F694E2CBAF8E800C9AF21 /* LaunchScreen.storyboard */,
 				6D7F69512CBAF8E800C9AF21 /* Info.plist */,
@@ -236,7 +233,6 @@
 			files = (
 				6D7F69502CBAF8E800C9AF21 /* LaunchScreen.storyboard in Resources */,
 				6D7F694D2CBAF8E800C9AF21 /* Assets.xcassets in Resources */,
-				6D7F69482CBAF8E600C9AF21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6D7F69462CBAF8E600C9AF21 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D7F69472CBAF8E600C9AF21 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6D7F694E2CBAF8E800C9AF21 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -445,19 +433,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.0.0;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MoneyWise/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MoneyWise.MoneyWise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -472,19 +461,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 0.0.0;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MoneyWise/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = MoneyWise.MoneyWise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
