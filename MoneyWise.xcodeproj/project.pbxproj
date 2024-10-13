@@ -20,6 +20,8 @@
 		6DB528632CBC5DD90055B686 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB528622CBC5DD90055B686 /* SnapKit-Dynamic */; };
 		6DB528662CBC61670055B686 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB528652CBC61670055B686 /* Alamofire */; };
 		6DB528682CBC61670055B686 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB528672CBC61670055B686 /* AlamofireDynamic */; };
+		6DB5286B2CBC62510055B686 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB5286A2CBC62510055B686 /* DGCharts */; };
+		6DB5286D2CBC62510055B686 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB5286C2CBC62510055B686 /* DGChartsDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +64,9 @@
 			files = (
 				6DB528662CBC61670055B686 /* Alamofire in Frameworks */,
 				6DB528682CBC61670055B686 /* AlamofireDynamic in Frameworks */,
+				6DB5286B2CBC62510055B686 /* DGCharts in Frameworks */,
 				6DB528612CBC5DD90055B686 /* SnapKit in Frameworks */,
+				6DB5286D2CBC62510055B686 /* DGChartsDynamic in Frameworks */,
 				6DB528632CBC5DD90055B686 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +160,8 @@
 				6DB528622CBC5DD90055B686 /* SnapKit-Dynamic */,
 				6DB528652CBC61670055B686 /* Alamofire */,
 				6DB528672CBC61670055B686 /* AlamofireDynamic */,
+				6DB5286A2CBC62510055B686 /* DGCharts */,
+				6DB5286C2CBC62510055B686 /* DGChartsDynamic */,
 			);
 			productName = MoneyWise;
 			productReference = 6D7F693D2CBAF8E600C9AF21 /* MoneyWise.app */;
@@ -232,6 +238,7 @@
 			packageReferences = (
 				6DB5285F2CBC5DD90055B686 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				6DB528642CBC61670055B686 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6DB528692CBC62510055B686 /* XCRemoteSwiftPackageReference "Charts" */,
 			);
 			productRefGroup = 6D7F693E2CBAF8E600C9AF21 /* Products */;
 			projectDirPath = "";
@@ -633,6 +640,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		6DB528692CBC62510055B686 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -655,6 +670,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6DB528642CBC61670055B686 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = AlamofireDynamic;
+		};
+		6DB5286A2CBC62510055B686 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6DB528692CBC62510055B686 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+		6DB5286C2CBC62510055B686 /* DGChartsDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6DB528692CBC62510055B686 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGChartsDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 
