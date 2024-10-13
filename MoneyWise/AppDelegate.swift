@@ -8,74 +8,103 @@
 import UIKit
 import CoreData
 
+/// The AppDelegate class serves as the entry point for app-wide configurations
+/// and handles app lifecycle events such as launching, backgrounding, and termination.
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    // MARK: - UIApplicationDelegate Methods
 
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    /// Called when the application has finished launching.
+    ///
+    /// This is the initial setup method for app-wide configurations that need to occur
+    /// when the app starts, such as setting up third-party services, background fetches,
+    /// or initial data loading.
+    ///
+    /// - Parameters:
+    ///   - application: The singleton app object.
+    ///   - launchOptions: A dictionary indicating why the app was launched.
+    /// - Returns: A Boolean value indicating whether the app successfully finished launching.
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
         // Override point for customization after application launch.
         return true
     }
 
     // MARK: UISceneSession Lifecycle
 
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
+    /// Called when a new scene session is being created.
+    ///
+    /// This method is used to return a configuration for creating the new scene.
+    ///
+    /// - Parameters:
+    ///   - application: The singleton app object.
+    ///   - connectingSceneSession: The session object containing scene-specific information.
+    ///   - options: Options used to configure the scene's connection.
+    /// - Returns: A UISceneConfiguration object with scene's configuration data.
+    func application(
+        _ application: UIApplication,
+        configurationForConnecting connectingSceneSession: UISceneSession,
+        options: UIScene.ConnectionOptions
+    ) -> UISceneConfiguration {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    /// Called when the user discards a scene session.
+    ///
+    /// If any sessions were discarded while the app was not running, this will be called
+    /// shortly after `application(_:didFinishLaunchingWithOptions:)`.
+    /// Use this method to release any resources specific to the discarded scenes.
+    ///
+    /// - Parameters:
+    ///   - application: The singleton app object.
+    ///   - sceneSessions: A set of UISceneSession objects that were discarded.
+    func application(
+        _ application: UIApplication,
+        didDiscardSceneSessions sceneSessions: Set<UISceneSession>
+    ) {
+        // Handle cleanup of any resources specific to discarded scenes.
     }
 
-    // MARK: - Core Data stack
+    // MARK: - Core Data Stack
 
+    /// The persistent container that handles the Core Data stack.
+    ///
+    /// This container is responsible for setting up the Core Data environment, including
+    /// loading the persistent store (the SQLite database, for example) and managing
+    /// the object context.
     lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-        */
+        // The name of the Core Data model (MoneyWise) matches the .xcdatamodeld file.
         let container = NSPersistentContainer(name: "MoneyWise")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores { storeDescription, error in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
+                // Fatal errors are useful for debugging but should not be used in production.
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
-        })
+        }
         return container
     }()
 
-    // MARK: - Core Data Saving support
+    // MARK: - Core Data Saving Support
 
-    func saveContext () {
+    /// Saves any changes in the app's managed object context.
+    ///
+    /// This method checks if the managed object context has unsaved changes.
+    /// If changes exist, it attempts to save them. In the event of an error,
+    /// it logs the error details and terminates the app.
+    func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
+                // Replace this with appropriate error handling in production.
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
-
 }
-
