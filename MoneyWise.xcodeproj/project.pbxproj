@@ -16,6 +16,10 @@
 		6D7F695B2CBAF8E800C9AF21 /* MoneyWiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F695A2CBAF8E800C9AF21 /* MoneyWiseTests.swift */; };
 		6D7F69652CBAF8E800C9AF21 /* MoneyWiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69642CBAF8E800C9AF21 /* MoneyWiseUITests.swift */; };
 		6D7F69672CBAF8E800C9AF21 /* MoneyWiseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69662CBAF8E800C9AF21 /* MoneyWiseUITestsLaunchTests.swift */; };
+		6DB528612CBC5DD90055B686 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB528602CBC5DD90055B686 /* SnapKit */; };
+		6DB528632CBC5DD90055B686 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB528622CBC5DD90055B686 /* SnapKit-Dynamic */; };
+		6DB528662CBC61670055B686 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB528652CBC61670055B686 /* Alamofire */; };
+		6DB528682CBC61670055B686 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB528672CBC61670055B686 /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DB528662CBC61670055B686 /* Alamofire in Frameworks */,
+				6DB528682CBC61670055B686 /* AlamofireDynamic in Frameworks */,
+				6DB528612CBC5DD90055B686 /* SnapKit in Frameworks */,
+				6DB528632CBC5DD90055B686 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +152,10 @@
 			);
 			name = MoneyWise;
 			packageProductDependencies = (
+				6DB528602CBC5DD90055B686 /* SnapKit */,
+				6DB528622CBC5DD90055B686 /* SnapKit-Dynamic */,
+				6DB528652CBC61670055B686 /* Alamofire */,
+				6DB528672CBC61670055B686 /* AlamofireDynamic */,
 			);
 			productName = MoneyWise;
 			productReference = 6D7F693D2CBAF8E600C9AF21 /* MoneyWise.app */;
@@ -217,6 +229,10 @@
 				Base,
 			);
 			mainGroup = 6D7F69342CBAF8E600C9AF21;
+			packageReferences = (
+				6DB5285F2CBC5DD90055B686 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				6DB528642CBC61670055B686 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 6D7F693E2CBAF8E600C9AF21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -599,6 +615,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6DB5285F2CBC5DD90055B686 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		6DB528642CBC61670055B686 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6DB528602CBC5DD90055B686 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6DB5285F2CBC5DD90055B686 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		6DB528622CBC5DD90055B686 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6DB5285F2CBC5DD90055B686 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		6DB528652CBC61670055B686 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6DB528642CBC61670055B686 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		6DB528672CBC61670055B686 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6DB528642CBC61670055B686 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6D7F69492CBAF8E600C9AF21 /* MoneyWise.xcdatamodeld */ = {
