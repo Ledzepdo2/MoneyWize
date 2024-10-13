@@ -147,12 +147,14 @@
 			buildConfigurationList = 6D7F696A2CBAF8E800C9AF21 /* Build configuration list for PBXNativeTarget "MoneyWise" */;
 			buildPhases = (
 				6D7F69392CBAF8E600C9AF21 /* Sources */,
+				6D21F2882CBC68070036664C /* Run Script */,
 				6D7F693A2CBAF8E600C9AF21 /* Frameworks */,
 				6D7F693B2CBAF8E600C9AF21 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6D36B7BF2CBC6C5E004FF4E2 /* PBXTargetDependency */,
 			);
 			name = MoneyWise;
 			packageProductDependencies = (
@@ -239,6 +241,7 @@
 				6DB5285F2CBC5DD90055B686 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				6DB528642CBC61670055B686 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				6DB528692CBC62510055B686 /* XCRemoteSwiftPackageReference "Charts" */,
+				6D21F2872CBC67690036664C /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 6D7F693E2CBAF8E600C9AF21 /* Products */;
 			projectDirPath = "";
@@ -277,6 +280,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D21F2882CBC68070036664C /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/newInputFile.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/swiftlint_done",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint\n    touch \"${DERIVED_FILE_DIR}/swiftlint_done\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6D7F69392CBAF8E600C9AF21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -309,6 +336,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6D36B7BF2CBC6C5E004FF4E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 6D36B7BE2CBC6C5E004FF4E2 /* SwiftLintBuildToolPlugin */;
+		};
 		6D7F69582CBAF8E800C9AF21 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6D7F693C2CBAF8E600C9AF21 /* MoneyWise */;
@@ -624,6 +655,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6D21F2872CBC67690036664C /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.50.0;
+			};
+		};
 		6DB5285F2CBC5DD90055B686 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -651,6 +690,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6D36B7BE2CBC6C5E004FF4E2 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D21F2872CBC67690036664C /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
 		6DB528602CBC5DD90055B686 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6DB5285F2CBC5DD90055B686 /* XCRemoteSwiftPackageReference "SnapKit" */;

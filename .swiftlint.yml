@@ -1,0 +1,61 @@
+# Deshabilitar reglas que no son necesarias en el proyecto
+disabled_rules:
+  - line_length              # Deshabilita la regla de longitud de línea
+  - force_cast               # Deshabilita force casting
+  - force_unwrapping         # Deshabilita force unwrapping
+  - cyclomatic_complexity     # Deshabilita la complejidad ciclomática
+  - file_length              # Deshabilita advertencias sobre el largo de archivo
+
+# Reglas personalizadas
+line_length:
+  warning: 120               # Límite de advertencia en 120 caracteres
+  error: 140                 # Límite de error en 140 caracteres
+  ignores_comments: true     # Ignorar líneas que sean solo comentarios
+  ignores_urls: true         # Ignorar URLs largas en el código
+
+type_body_length:
+  warning: 300               # Advertencia si el cuerpo de un tipo excede 300 líneas
+  error: 400                 # Error si excede 400 líneas
+
+function_body_length:
+  warning: 40                # Advertencia si una función tiene más de 40 líneas
+  error: 50                  # Error si tiene más de 50 líneas
+
+# Reglas opcionales a aplicar (opt-in rules)
+opt_in_rules:
+  - empty_count              # Asegura que uses .isEmpty en lugar de count == 0
+  - closure_spacing          # Aplica reglas de espacio en las closures
+  - operator_usage_whitespace # Controla el uso de espacio en operadores
+
+# Incluir y excluir archivos y carpetas
+included:
+  - Sources                  # Incluir archivos de la carpeta Sources
+  - Tests                    # Incluir archivos de la carpeta Tests
+
+excluded:
+  - Pods                     # Excluir la carpeta Pods
+  - Carthage                 # Excluir la carpeta Carthage
+  - Generated                # Excluir archivos generados automáticamente
+
+# Configuración de reportes
+reporter: "xcode"            # Formato de reporte para Xcode (puede ser json, xcode, markdown)
+
+# Configuración de identificadores
+identifier_name:
+  min_length: 3              # Longitud mínima de identificadores
+  excluded:                  # Identificadores excluidos de esta regla
+    - id
+    - x
+    - y
+
+# Ignorar reglas en archivos o carpetas específicas
+excluded:
+  - Generated                # Evitar aplicar el linter en archivos generados automáticamente
+
+# Espacios entre operadores
+operator_usage_whitespace:
+  severity: warning          # Mostrar advertencia en lugar de error
+
+# Espacios en blanco al final de línea
+trailing_whitespace:
+  ignores_comments: true     # Ignora espacios en blanco al final de los comentarios
