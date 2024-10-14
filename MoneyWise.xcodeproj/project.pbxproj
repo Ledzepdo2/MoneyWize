@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D4F92A22CBDADB400E7B610 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 6D4F92A12CBDADB400E7B610 /* Lottie */; };
 		6D7F69412CBAF8E600C9AF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69402CBAF8E600C9AF21 /* AppDelegate.swift */; };
 		6D7F69432CBAF8E600C9AF21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69422CBAF8E600C9AF21 /* SceneDelegate.swift */; };
 		6D7F69452CBAF8E600C9AF21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69442CBAF8E600C9AF21 /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DB528662CBC61670055B686 /* Alamofire in Frameworks */,
+				6D4F92A22CBDADB400E7B610 /* Lottie in Frameworks */,
 				6DB528682CBC61670055B686 /* AlamofireDynamic in Frameworks */,
 				6DB5286B2CBC62510055B686 /* DGCharts in Frameworks */,
 				6DB528612CBC5DD90055B686 /* SnapKit in Frameworks */,
@@ -164,6 +166,7 @@
 				6DB528672CBC61670055B686 /* AlamofireDynamic */,
 				6DB5286A2CBC62510055B686 /* DGCharts */,
 				6DB5286C2CBC62510055B686 /* DGChartsDynamic */,
+				6D4F92A12CBDADB400E7B610 /* Lottie */,
 			);
 			productName = MoneyWise;
 			productReference = 6D7F693D2CBAF8E600C9AF21 /* MoneyWise.app */;
@@ -242,6 +245,7 @@
 				6DB528642CBC61670055B686 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				6DB528692CBC62510055B686 /* XCRemoteSwiftPackageReference "Charts" */,
 				6D21F2872CBC67690036664C /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				6D4F92A02CBDADB400E7B610 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 6D7F693E2CBAF8E600C9AF21 /* Products */;
 			projectDirPath = "";
@@ -663,6 +667,14 @@
 				minimumVersion = 0.50.0;
 			};
 		};
+		6D4F92A02CBDADB400E7B610 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 		6DB5285F2CBC5DD90055B686 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -694,6 +706,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6D21F2872CBC67690036664C /* XCRemoteSwiftPackageReference "SwiftLint" */;
 			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+		6D4F92A12CBDADB400E7B610 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6D4F92A02CBDADB400E7B610 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 		6DB528602CBC5DD90055B686 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
