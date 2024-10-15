@@ -1,32 +1,34 @@
-### Description
+## Description
 
-Please include a summary of the change and which issue is fixed.
-List any dependencies that are required for this change.
+<!-- Provide a concise description of the changes made in this Pull Request. -->
 
-Fixes # (issue)
+## Type of change
 
-### Type of Change
+- [ ] Bugfix (solves a problem)
+- [ ] New feature (change that adds a functionality)
+- [ ] Enhancement (change that improves an existing functionality)
+- [ ] Refactoring (change that doesn't affect functionality or add features)
+- [ ] Documentation (update or add documentation)
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] This change requires a documentation update
+## How has this been tested?
 
-### How Has This Been Tested?
+<!-- Provide detailed instructions on how this PR has been tested.
+Include the necessary instructions to replicate the tests. -->
 
-Please describe the tests that you ran to verify your changes.
-Provide instructions so others can reproduce.
+- [ ] Unit tests
+- [ ] Integration tests
+- [ ] Manual tests
+- [ ] Others: <!-- Specify if necessary -->
 
-- [ ] Test A
-- [ ] Test B
+## Checklist
 
-### Checklist:
+- [ ] I have followed the code style guidelines of this project.
+- [ ] I have performed a self-review of my code.
+- [ ] I have commented my code, especially in hard-to-understand areas.
+- [ ] I have made corresponding changes to the documentation.
+- [ ] My changes do not generate new warnings.
+- [ ] I have added tests that prove my fix is effective or that my feature works.
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
+## Additional information
+
+<!-- Add any additional information you consider important. -->
