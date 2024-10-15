@@ -1,6 +1,5 @@
 name: CI - MoneyWise
 
-# Ejecutar el workflow cuando haya un push o un pull request en las ramas main y develop
 on:
   push:
     branches:
@@ -25,24 +24,18 @@ jobs:
       - name: Set up Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: "14.3.1"  # Actualiza la versión de Xcode a la disponible
+          xcode-version: "14.3.1"
 
       # *** Nuevo Paso: Navegar al directorio del proyecto ***
       - name: Navigate to the project directory
         run: cd MoneyWise
 
-      # Paso 3: Instalar dependencias con Swift Package Manager
-      - name: Resolve Swift Package Dependencies
-        run: swift package resolve
-        working-directory: ./MoneyWise
-
-      # Paso 4: Compilar el proyecto
+      # Paso 3: Compilar el proyecto con Xcode, que también resolverá las dependencias
       - name: Build the project
         run: xcodebuild -scheme "MoneyWise" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0' build | xcpretty
         working-directory: ./MoneyWise
 
-      # Paso 5: Ejecutar pruebas unitarias
+      # Paso 4: Ejecutar pruebas unitarias
       - name: Run Unit Tests
         run: xcodebuild test -scheme "MoneyWise" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.0' -enableCodeCoverage YES | xcpretty
         working-directory: ./MoneyWise
-
