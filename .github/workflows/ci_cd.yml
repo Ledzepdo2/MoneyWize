@@ -1,0 +1,57 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Xcode
+      run: sudo xcode-select -s /Applications/Xcode_15.app
+
+    - name: Install dependencies
+      run: |
+        brew install swiftlint
+        swiftlint
+        xcodebuild -resolvePackageDependencies
+
+    - name: Build the app
+      run: xcodebuild -scheme MoneyWise -destination 'platform=iOS Simulator,name=iPhone 14' build
+
+    - name: Run unit tests
+      run: xcodebuild test -scheme MoneyWise -destination 'platform=iOS Simulator,name=iPhone 14'
+
+  deploy:
+    needs: build
+    runs-on: macos-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: xcodebuild -resolvePackageDependencies
+
+    - name: Archive and export the app
+      run: |
+        xcodebuild -scheme MoneyWise -archivePath ${{ github.workspace }}/build/MoneyWise.xcarchive archive
+        xcodebuild -exportArchive -archivePath ${{ github.workspace }}/build/MoneyWise.xcarchive -exportPath ${{ github.workspace }}/build/MoneyWise.ipa
+
+    - name: Upload to TestFlight or App Store
+      env:
+        APP_STORE_CONNECT_API_KEY: ${{ secrets.APP_STORE_CONNECT_API_KEY }}
+      run: |
+        xcrun altool --upload-app --type ios --file ${{ github.workspace }}/build/MoneyWise.ipa --apiKey $APP_STORE_CONNECT_API_KEY
