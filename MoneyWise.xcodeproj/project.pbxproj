@@ -13,7 +13,6 @@
 		6D7F69452CBAF8E600C9AF21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69442CBAF8E600C9AF21 /* ViewController.swift */; };
 		6D7F694B2CBAF8E600C9AF21 /* MoneyWise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69492CBAF8E600C9AF21 /* MoneyWise.xcdatamodeld */; };
 		6D7F694D2CBAF8E800C9AF21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F694C2CBAF8E800C9AF21 /* Assets.xcassets */; };
-		6D7F69502CBAF8E800C9AF21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F694E2CBAF8E800C9AF21 /* LaunchScreen.storyboard */; };
 		6D7F695B2CBAF8E800C9AF21 /* MoneyWiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F695A2CBAF8E800C9AF21 /* MoneyWiseTests.swift */; };
 		6D7F69652CBAF8E800C9AF21 /* MoneyWiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69642CBAF8E800C9AF21 /* MoneyWiseUITests.swift */; };
 		6D7F69672CBAF8E800C9AF21 /* MoneyWiseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69662CBAF8E800C9AF21 /* MoneyWiseUITestsLaunchTests.swift */; };
@@ -23,6 +22,7 @@
 		6DB528682CBC61670055B686 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB528672CBC61670055B686 /* AlamofireDynamic */; };
 		6DB5286B2CBC62510055B686 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB5286A2CBC62510055B686 /* DGCharts */; };
 		6DB5286D2CBC62510055B686 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB5286C2CBC62510055B686 /* DGChartsDynamic */; };
+		6DF054562CC011C8002665F5 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF054552CC011C8002665F5 /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +49,13 @@
 		6D7F69442CBAF8E600C9AF21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6D7F694A2CBAF8E600C9AF21 /* MoneyWise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyWise.xcdatamodel; sourceTree = "<group>"; };
 		6D7F694C2CBAF8E800C9AF21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6D7F694F2CBAF8E800C9AF21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D7F69512CBAF8E800C9AF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D7F69562CBAF8E800C9AF21 /* MoneyWiseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyWiseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7F695A2CBAF8E800C9AF21 /* MoneyWiseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyWiseTests.swift; sourceTree = "<group>"; };
 		6D7F69602CBAF8E800C9AF21 /* MoneyWiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyWiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7F69642CBAF8E800C9AF21 /* MoneyWiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyWiseUITests.swift; sourceTree = "<group>"; };
 		6D7F69662CBAF8E800C9AF21 /* MoneyWiseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyWiseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6DF054552CC011C8002665F5 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,8 +116,8 @@
 				6D7F69402CBAF8E600C9AF21 /* AppDelegate.swift */,
 				6D7F69422CBAF8E600C9AF21 /* SceneDelegate.swift */,
 				6D7F69442CBAF8E600C9AF21 /* ViewController.swift */,
+				6DF054552CC011C8002665F5 /* LaunchScreenViewController.swift */,
 				6D7F694C2CBAF8E800C9AF21 /* Assets.xcassets */,
-				6D7F694E2CBAF8E800C9AF21 /* LaunchScreen.storyboard */,
 				6D7F69512CBAF8E800C9AF21 /* Info.plist */,
 				6D7F69492CBAF8E600C9AF21 /* MoneyWise.xcdatamodeld */,
 			);
@@ -263,7 +263,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D7F69502CBAF8E800C9AF21 /* LaunchScreen.storyboard in Resources */,
 				6D7F694D2CBAF8E800C9AF21 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +315,7 @@
 				6D7F69452CBAF8E600C9AF21 /* ViewController.swift in Sources */,
 				6D7F69412CBAF8E600C9AF21 /* AppDelegate.swift in Sources */,
 				6D7F694B2CBAF8E600C9AF21 /* MoneyWise.xcdatamodeld in Sources */,
+				6DF054562CC011C8002665F5 /* LaunchScreenViewController.swift in Sources */,
 				6D7F69432CBAF8E600C9AF21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,17 +355,6 @@
 			targetProxy = 6D7F69612CBAF8E800C9AF21 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6D7F694E2CBAF8E800C9AF21 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D7F694F2CBAF8E800C9AF21 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6D7F69682CBAF8E800C9AF21 /* Debug */ = {
@@ -499,7 +488,7 @@
 				INFOPLIST_FILE = MoneyWise/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -528,7 +517,7 @@
 				INFOPLIST_FILE = MoneyWise/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
