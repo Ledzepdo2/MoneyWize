@@ -23,6 +23,7 @@
 		6DB5286B2CBC62510055B686 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB5286A2CBC62510055B686 /* DGCharts */; };
 		6DB5286D2CBC62510055B686 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB5286C2CBC62510055B686 /* DGChartsDynamic */; };
 		6DF054562CC011C8002665F5 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF054552CC011C8002665F5 /* LaunchScreenViewController.swift */; };
+		6DF054592CC02DC4002665F5 /* LaunchScreenViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF054572CC02DC4002665F5 /* LaunchScreenViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		6D7F69642CBAF8E800C9AF21 /* MoneyWiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyWiseUITests.swift; sourceTree = "<group>"; };
 		6D7F69662CBAF8E800C9AF21 /* MoneyWiseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyWiseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6DF054552CC011C8002665F5 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		6DF054572CC02DC4002665F5 /* LaunchScreenViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				6D7F695A2CBAF8E800C9AF21 /* MoneyWiseTests.swift */,
+				6DF054572CC02DC4002665F5 /* LaunchScreenViewControllerTests.swift */,
 			);
 			path = MoneyWiseTests;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D7F695B2CBAF8E800C9AF21 /* MoneyWiseTests.swift in Sources */,
+				6DF054592CC02DC4002665F5 /* LaunchScreenViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

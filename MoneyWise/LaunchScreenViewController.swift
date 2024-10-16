@@ -28,13 +28,13 @@ class LaunchScreenViewController: UIViewController {
     
     /// Sets up the view's properties such as background color.
     private func setupView() {
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .mWBlue
     }
 
     /// Adds the logo image to the center of the view using SnapKit for layout.
     private func addLogoImage() {
         let logoImageView = UIImageView()
-        logoImageView.image = UIImage(named: "yourLogoImageName") // Replace with actual image name
+        logoImageView.image = UIImage(named: "AppIcon") // Replace with actual image name
         view.addSubview(logoImageView)
         
         // Set constraints using SnapKit to center the image and set its size
