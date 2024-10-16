@@ -7,20 +7,14 @@
 
 import UIKit
 
-/// The SceneDelegate class is responsible for managing the window and the app's lifecycle events.
+/// The SceneDelegate class manages the app's window and scene lifecycle events.
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    // The main window of the application that contains the app's views.
     var window: UIWindow?
 
     /// This method is called when the scene is about to connect to the app.
     ///
-    /// Here, we manually create the window and set the root view controller programmatically.
-    ///
-    /// - Parameters:
-    ///   - scene: The scene object that is being connected to the app.
-    ///   - session: The session related to the scene.
-    ///   - connectionOptions: Additional options for connecting the scene, such as handling URLs.
+    /// Here, we create the window and set the root view controller programmatically.
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Ensure the scene is of type UIWindowScene
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -28,58 +22,49 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create a new UIWindow using the provided UIWindowScene
         window = UIWindow(windowScene: windowScene)
         
-        // Initialize the root view controller of the application
-        // Replace 'ViewController()' with the starting view controller of your app
-        let rootViewController = ViewController()
+        // Initialize the root view controller of the application (e.g., LaunchScreenViewController or MainViewController)
+        let rootViewController = LaunchScreenViewController() // Or your main view controller
         
-        // Optionally, wrap the root view controller in a UINavigationController if navigation is required
-        // let navigationController = UINavigationController(rootViewController: rootViewController)
-        // window?.rootViewController = navigationController
-        
-        // Assign the root view controller to the window
+        // Set the root view controller
         window?.rootViewController = rootViewController
         
         // Make the window visible
         window?.makeKeyAndVisible()
     }
 
-    /// Called when the scene is disconnected from the app.
-    ///
-    /// Use this method to release resources that were associated with the scene.
-    /// - Parameter scene: The scene being disconnected.
-    func sceneDidDisconnect(_ scene: UIScene) {
-        // Optional logic to handle the scene being disconnected from the app.
-        // This is usually triggered when the app is closing or the scene goes to the background permanently.
-    }
-
     /// Called when the scene moves from an inactive state to an active state.
     ///
-    /// - Parameter scene: The scene that is becoming active.
+    /// Use this to refresh data or the user interface when the app becomes active.
     func sceneDidBecomeActive(_ scene: UIScene) {
-        // Restart any tasks that were paused or not started when the scene was inactive.
+        // Restart tasks that were paused when the app was inactive.
+        // This can include refreshing the user interface or syncing data with a server.
+        print("App is now active - refresh data if necessary")
     }
 
     /// Called when the scene moves from an active state to an inactive state.
     ///
-    /// - Parameter scene: The scene that is becoming inactive.
+    /// Save sensitive data or the current state of the app.
     func sceneWillResignActive(_ scene: UIScene) {
-        // This method is called when the app is about to become inactive, such as when a phone call is received.
+        // Pause ongoing tasks or disable features that should not run while the app is inactive.
+        print("App is about to become inactive - consider saving current progress")
     }
 
     /// Called as the scene transitions from the background to the foreground.
     ///
-    /// - Parameter scene: The scene that is entering the foreground.
+    /// This is a good place to refresh any data or the UI that might need updating after being in the background.
     func sceneWillEnterForeground(_ scene: UIScene) {
-        // Use this method to undo changes made when the app entered the background.
-        // For example, you can resume tasks that were paused when the app was backgrounded.
+        // Undo changes made when the app entered the background.
+        // For example, refresh the UI or sync with a backend.
+        print("App is entering foreground - prepare UI for the user")
     }
 
     /// Called as the scene transitions from the foreground to the background.
     ///
-    /// - Parameter scene: The scene that is entering the background.
+    /// Save data or synchronize with a server before the app goes into the background.
     func sceneDidEnterBackground(_ scene: UIScene) {
-        // This method is ideal for saving data before the app moves to the background.
-        // For example, saving Core Data context to ensure data is persisted.
+        // Save data if appropriate and sync with the server.
+        // This is the time to ensure the app state is preserved in case it is terminated.
+        print("App has entered background - save data and sync if necessary")
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 }
