@@ -49,7 +49,7 @@ class LaunchScreenViewController: UIViewController {
     /// - Parameter delay: The delay in seconds before the transition happens.
     private func transitionToMainViewController(after delay: TimeInterval) {
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-            let mainViewController = ViewController()  // Main app's view controller
+            let mainViewController = LogInViewController()  // Main app's view controller
             mainViewController.modalTransitionStyle = .crossDissolve
             mainViewController.modalPresentationStyle = .fullScreen
             self.present(mainViewController, animated: true, completion: nil)
