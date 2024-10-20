@@ -10,7 +10,7 @@
 		6D4F92A22CBDADB400E7B610 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 6D4F92A12CBDADB400E7B610 /* Lottie */; };
 		6D7F69412CBAF8E600C9AF21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69402CBAF8E600C9AF21 /* AppDelegate.swift */; };
 		6D7F69432CBAF8E600C9AF21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69422CBAF8E600C9AF21 /* SceneDelegate.swift */; };
-		6D7F69452CBAF8E600C9AF21 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69442CBAF8E600C9AF21 /* LogInViewController.swift */; };
+		6D7F69452CBAF8E600C9AF21 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69442CBAF8E600C9AF21 /* LoginViewController.swift */; };
 		6D7F694B2CBAF8E600C9AF21 /* MoneyWise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F69492CBAF8E600C9AF21 /* MoneyWise.xcdatamodeld */; };
 		6D7F694D2CBAF8E800C9AF21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D7F694C2CBAF8E800C9AF21 /* Assets.xcassets */; };
 		6D7F695B2CBAF8E800C9AF21 /* MoneyWiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F695A2CBAF8E800C9AF21 /* MoneyWiseTests.swift */; };
@@ -23,6 +23,12 @@
 		6DB5286B2CBC62510055B686 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB5286A2CBC62510055B686 /* DGCharts */; };
 		6DB5286D2CBC62510055B686 /* DGChartsDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB5286C2CBC62510055B686 /* DGChartsDynamic */; };
 		6DB614D42CC46536009965BB /* CustomLottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB614D32CC46536009965BB /* CustomLottieView.swift */; };
+		6DB614E62CC5754C009965BB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB614E52CC5754C009965BB /* LoginViewModel.swift */; };
+		6DB614E82CC575E3009965BB /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB614E72CC575E3009965BB /* LoginViewControllerTests.swift */; };
+		6DB614EB2CC57622009965BB /* MockLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB614EA2CC57622009965BB /* MockLoginViewModel.swift */; };
+		6DB614EC2CC579D9009965BB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB614E52CC5754C009965BB /* LoginViewModel.swift */; };
+		6DB614EE2CC57C29009965BB /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB614ED2CC57C29009965BB /* NotificationNames.swift */; };
+		6DB614EF2CC57CFF009965BB /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB614ED2CC57C29009965BB /* NotificationNames.swift */; };
 		6DF054562CC011C8002665F5 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF054552CC011C8002665F5 /* LaunchScreenViewController.swift */; };
 		6DF054592CC02DC4002665F5 /* LaunchScreenViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF054572CC02DC4002665F5 /* LaunchScreenViewControllerTests.swift */; };
 /* End PBXBuildFile section */
@@ -48,7 +54,7 @@
 		6D7F693D2CBAF8E600C9AF21 /* MoneyWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D7F69402CBAF8E600C9AF21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D7F69422CBAF8E600C9AF21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6D7F69442CBAF8E600C9AF21 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		6D7F69442CBAF8E600C9AF21 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6D7F694A2CBAF8E600C9AF21 /* MoneyWise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoneyWise.xcdatamodel; sourceTree = "<group>"; };
 		6D7F694C2CBAF8E800C9AF21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D7F69512CBAF8E800C9AF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +64,10 @@
 		6D7F69642CBAF8E800C9AF21 /* MoneyWiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyWiseUITests.swift; sourceTree = "<group>"; };
 		6D7F69662CBAF8E800C9AF21 /* MoneyWiseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyWiseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6DB614D32CC46536009965BB /* CustomLottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLottieView.swift; sourceTree = "<group>"; };
+		6DB614E52CC5754C009965BB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		6DB614E72CC575E3009965BB /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		6DB614EA2CC57622009965BB /* MockLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginViewModel.swift; sourceTree = "<group>"; };
+		6DB614ED2CC57C29009965BB /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		6DF054552CC011C8002665F5 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		6DF054572CC02DC4002665F5 /* LaunchScreenViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,8 +144,10 @@
 		6D7F69592CBAF8E800C9AF21 /* MoneyWiseTests */ = {
 			isa = PBXGroup;
 			children = (
+				6DB614E92CC57600009965BB /* Mocks */,
 				6D7F695A2CBAF8E800C9AF21 /* MoneyWiseTests.swift */,
 				6DF054572CC02DC4002665F5 /* LaunchScreenViewControllerTests.swift */,
+				6DB614E72CC575E3009965BB /* LoginViewControllerTests.swift */,
 			);
 			path = MoneyWiseTests;
 			sourceTree = "<group>";
@@ -152,6 +164,7 @@
 		6DB614D52CC55F9C009965BB /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				6DB614D72CC55FF6009965BB /* Factories */,
 				6DB614D62CC55FEC009965BB /* Entities */,
 			);
 			path = Domain;
@@ -160,7 +173,6 @@
 		6DB614D62CC55FEC009965BB /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				6DB614D72CC55FF6009965BB /* Factories */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -168,6 +180,7 @@
 		6DB614D72CC55FF6009965BB /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				6DB614ED2CC57C29009965BB /* NotificationNames.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -244,9 +257,9 @@
 		6DB614E12CC56109009965BB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6DB614E22CC56119009965BB /* ViewControllers */,
 				6DB614E42CC5612C009965BB /* ViewModels */,
 				6DB614E32CC56122009965BB /* Views */,
-				6DB614E22CC56119009965BB /* ViewControllers */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -255,7 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				6DF054552CC011C8002665F5 /* LaunchScreenViewController.swift */,
-				6D7F69442CBAF8E600C9AF21 /* LogInViewController.swift */,
+				6D7F69442CBAF8E600C9AF21 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -271,8 +284,17 @@
 		6DB614E42CC5612C009965BB /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6DB614E52CC5754C009965BB /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6DB614E92CC57600009965BB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				6DB614EA2CC57622009965BB /* MockLoginViewModel.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,12 +468,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D7F69452CBAF8E600C9AF21 /* LogInViewController.swift in Sources */,
+				6D7F69452CBAF8E600C9AF21 /* LoginViewController.swift in Sources */,
 				6D7F69412CBAF8E600C9AF21 /* AppDelegate.swift in Sources */,
 				6DB614D42CC46536009965BB /* CustomLottieView.swift in Sources */,
 				6D7F694B2CBAF8E600C9AF21 /* MoneyWise.xcdatamodeld in Sources */,
 				6DF054562CC011C8002665F5 /* LaunchScreenViewController.swift in Sources */,
+				6DB614EE2CC57C29009965BB /* NotificationNames.swift in Sources */,
 				6D7F69432CBAF8E600C9AF21 /* SceneDelegate.swift in Sources */,
+				6DB614E62CC5754C009965BB /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +483,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DB614E82CC575E3009965BB /* LoginViewControllerTests.swift in Sources */,
+				6DB614EF2CC57CFF009965BB /* NotificationNames.swift in Sources */,
 				6D7F695B2CBAF8E800C9AF21 /* MoneyWiseTests.swift in Sources */,
+				6DB614EB2CC57622009965BB /* MockLoginViewModel.swift in Sources */,
+				6DB614EC2CC579D9009965BB /* LoginViewModel.swift in Sources */,
 				6DF054592CC02DC4002665F5 /* LaunchScreenViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
